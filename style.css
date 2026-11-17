@@ -1,13 +1,45 @@
+  text-shadow: 0 0 16px #ff36b5;
+}
+
+.time-box label {
+  display: block;
+  margin-top: 7px;
+  color: #ffafe1;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.footer {
+  margin-top: 34px;
+  color: rgba(255, 255, 255, .84);
+  font-size: 11px;
+  letter-spacing: 3px;
+  line-height: 1.8;
+}
+
+.footer a {
+  display: inline-block;
+  margin-top: 7px;
+  color: #ffafe1;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Trailer section: same colors, borders and glow as the countdown boxes */
 .trailer {
-  margin: 65px auto 30px;
   width: min(850px, 100%);
+  margin: 65px auto 35px;
+  text-align: center;
 }
 
 .trailer h2 {
+  margin-bottom: 20px;
   color: #ffafe1;
   font-size: clamp(20px, 4vw, 30px);
   letter-spacing: 4px;
-  margin-bottom: 20px;
   text-shadow: 0 0 15px rgba(255, 54, 181, .65);
 }
 
@@ -17,11 +49,65 @@
   overflow: hidden;
   border: 1px solid rgba(255, 190, 235, .48);
   border-radius: 16px;
-  box-shadow: 0 0 25px rgba(255, 40, 180, .25);
+  background: rgba(16, 5, 31, .76);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 25px rgba(255, 40, 180, .18),
+    inset 0 0 20px rgba(255, 255, 255, .025);
 }
 
 .trailer-video iframe {
+  display: block;
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .rockstar-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .gta-art {
+    max-height: 220px;
+  }
+
+  .countdown {
+    gap: 10px;
+  }
+
+  .time-box {
+    width: calc(50% - 8px);
+    max-width: 155px;
+    padding: 17px 8px;
+  }
+
+  .time-box span {
+    font-size: 42px;
+  }
+
+  .time-box label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .footer {
+    margin-top: 25px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .trailer {
+    margin-top: 45px;
+  }
+
+  .trailer h2 {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
 }
